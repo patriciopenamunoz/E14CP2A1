@@ -1,11 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<h1>Showing Company</h1>
+<div class="well">
   <strong>Name:</strong>
   <%= @company.name %>
-</p>
+</div>
 
+<h2>Create and add new employee</h2>
 <%= render 'employees/form' %>
+
+<h2>List of employees</h2>
 <%= render 'employees/list' %>
 
 <%= link_to 'Edit', edit_company_path(@company) %> |
