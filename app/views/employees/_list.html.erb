@@ -5,6 +5,7 @@
       <th>Last name</th>
       <th>e-mail</th>
       <th>Area</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -14,6 +15,9 @@
       <td><%= employee.last_name %></td>
       <td><%= employee.email %></td>
       <td><%= employee.area.name %></td>
+      <td><%= link_to 'Delete',
+                      company_employee_path(@company,employee),
+                      method: :delete %></td>
     </tr>
     <% end %>
   </tbody>
