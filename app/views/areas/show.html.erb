@@ -1,9 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<h1>Showing Area</h1>
+<div class="well">
   <strong>Name:</strong>
   <%= @area.name %>
-</p>
+</div>
+
+<h2>List of employees</h2>
+<%= render 'employees/list_area' %>
 
 <%= link_to 'Edit', edit_area_path(@area) %> |
 <%= link_to 'Back', areas_path %>

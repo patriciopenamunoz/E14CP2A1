@@ -4,19 +4,19 @@
       <th>First name</th>
       <th>Last name</th>
       <th>e-mail</th>
-      <th>Area</th>
+      <th>Company</th>
       <th></th>
     </tr>
   </thead>
   <tbody>
-    <% @company.employees.each do |employee| %>
+    <% @area.employees.each do |employee| %>
     <tr>
       <td><%= employee.first_name %></td>
       <td><%= employee.last_name %></td>
       <td><%= employee.email %></td>
-      <td><%= employee.area.name %></td>
+      <td><%= link_to employee.company.name, employee.company %></td>
       <td><%= link_to 'Delete',
-                      company_employee_path(@company,employee),
+                      company_employee_path(@area,employee),
                       method: :delete,
                       class: 'btn btn-danger',
                       data: { confirm: 'Are you sure?' } %></td>
